@@ -61,7 +61,7 @@
                     BorderBrush="White"
                     Content="Каталог"
                     FontSize="20"
-                    Foreground="White">
+                    Foreground="Black">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30"/>
@@ -105,7 +105,7 @@
                     BorderBrush="White"
                     Content="Редактировать"
                     FontSize="20"
-                    Foreground="Black">
+                    Foreground="White">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30"/>
