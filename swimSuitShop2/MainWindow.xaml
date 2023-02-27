@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True"
-        Title="MainWindow" Height="600" Width="500">
+        BorderThickness="0.3"
+        Title="MainWindow" Height="600" Width="500" ResizeMode="CanResize">
+    <Window.Clip>
+        <RectangleGeometry Rect="0,0,500,600" RadiusX="10" RadiusY="10"/>
+    </Window.Clip>
     <Grid>
+
         <!-- 0.0 Разделение основного экрана -->
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -16,56 +21,54 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <!-- 1.0 Шапка -->
-        <Border CornerRadius="0,0,10,10" Background="#FF007AFF">
-
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="100"/>
-                </Grid.ColumnDefinitions>
-                <!-- Наполнение шапки -->
-                <!-- 1.1 Иконка -->
-                <Image Grid.Column="0"
-                   Margin="10"
-                   Source="/res/LogoSwim.png"/>
-                <!-- 1.2 Заголовок -->
-                <TextBlock Grid.Column="1"
+        <Border CornerRadius="0,0,15,15" Background="#FF007AFF" Grid.Row="0"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <!-- Наполнение шапки -->
+            <!-- 1.1 Иконка -->
+            <Image Grid.Column="0"
+                   Margin="12"
+                   Source="/res/LogoSwim1.png"/>
+            <!-- 1.2 Заголовок -->
+            <TextBlock Grid.Column="1"
                        Text="LINGERIE"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Javanese Text"
                        FontSize="40" Foreground="White" Height="72"/>
-                <!-- 1.3 Выход -->
-                <Button Grid.Column="2" Margin="10" Click="ExitClick" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" RenderTransformOrigin="0.5,0.5">
-                    <Button.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Button.RenderTransform>
-                    <Image Source="res/exits.png" Height="51" Width="46"/>
-                </Button>
-            </Grid>
-        </Border>
+            <!-- 1.3 Выход -->
+            <Button Grid.Column="2" Margin="10" Click="ExitClick" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Image Source="res/exits.png" Height="42" Width="36"/>
+            </Button>
+        </Grid>
         <!-- 2.0 Тело -->
-        <Grid Grid.Row="1" Background="White">
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="65"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="65"/>
             </Grid.RowDefinitions>
             <!-- Наполнение тела -->
             <!-- 2.1 Каталог -->
             <Button Grid.Row="1"
-                    Margin="20, 7"
+                    Margin="40, 5"
                     BorderBrush="White"
                     Content="Каталог"
-                    FontSize="30"
+                    FontSize="25"
                     FontFamily="Sylfaen"
                     Background="#FF007AFF"
                     Foreground="White">
@@ -77,10 +80,10 @@
             </Button>
             <!-- 2.2 Оформить заказ -->
             <Button Grid.Row="2"
-                    Margin="20, 7"
+                    Margin="40, 5"
                     BorderBrush="White"
                     Content="Оформить заказ"
-                    FontSize="30"
+                    FontSize="25"
                     FontFamily="Sylfaen"
                     Background="#FF007AFF"
                     Foreground="White">
@@ -92,10 +95,10 @@
             </Button>
             <!-- 2.3 Редактировать -->
             <Button Grid.Row="3"
-                    Margin="20, 7"
+                    Margin="40, 5"
                     BorderBrush="White"
                     Content="Редактировать"
-                    FontSize="30"
+                    FontSize="25"
                     FontFamily="Sylfaen"
                     Background="#FF007AFF"
                     Foreground="White">
@@ -107,18 +110,33 @@
             </Button>
         </Grid>
         <!-- 3.0 Подвал -->
-
-        <Grid Grid.Row="2" Background="#FF007AFF">
+        <Border CornerRadius="15,15,5,0" Background="#FF007AFF" Grid.Row="2"/>
+        <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- Наполнение подвала -->
             <!-- 3.1 Копирайт -->
-            <TextBlock Grid.Column="0" Text="©SwimsuitGTC" FontSize="20" FontFamily="Javanese Text" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" Height="35">
+            <TextBlock Grid.Column="0"
+                       Text="©LINGERIE"
+                       FontSize="20"
+                       FontFamily="Javanese Text"
+                       VerticalAlignment="Center"
+                       Margin="10,0,0,0"
+                       Foreground="White"
+                       Height="35">
             </TextBlock>
             <!-- 3.2 Почта -->
-            <Button Grid.Column="1" Height="40" Width="40" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"  Background="Transparent" BorderBrush="Transparent" Foreground="Transparent">
+            <Button Grid.Column="1"
+                    Height="45"
+                    Width="45"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,10,0"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Foreground="Transparent">
                 <Image Source="res/mails.png"/>
             </Button>
         </Grid>
