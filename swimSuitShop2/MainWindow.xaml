@@ -8,12 +8,11 @@
         WindowStyle="None"
         AllowsTransparency="True"
         BorderThickness="0.3"
-        Title="MainWindow" Height="600" Width="500" ResizeMode="CanResize">
+        Title="MainWindow" Height="550" Width="450" ResizeMode="CanResize">
     <Window.Clip>
         <RectangleGeometry Rect="0,0,500,600" RadiusX="10" RadiusY="10"/>
     </Window.Clip>
     <Grid>
-
         <!-- 0.0 Разделение основного экрана -->
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -74,7 +73,7 @@
                     Foreground="White">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="60"/>
+                        <Setter Property="CornerRadius" Value="40"/>
                     </Style>
                 </Button.Resources>
             </Button>
@@ -89,7 +88,7 @@
                     Foreground="White">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="60"/>
+                        <Setter Property="CornerRadius" Value="40"/>
                     </Style>
                 </Button.Resources>
             </Button>
@@ -104,7 +103,7 @@
                     Foreground="White">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="60"/>
+                        <Setter Property="CornerRadius" Value="40"/>
                     </Style>
                 </Button.Resources>
             </Button>
