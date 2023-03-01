@@ -20,14 +20,39 @@ namespace swimSuitShop2
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ExitClick(object sender, RoutedEventArgs e)
+    private void ExitClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        //Кнопка Каталог
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            View.Catalog newOrder = new View.Catalog();
+            this.Hide();
+            newOrder.ShowDialog();
+            this.Show();
+        }
+        //Кнопка Оформления заказа (Этап: Создание)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            View.MakeOrder newOrder = new View.MakeOrder();
+            this.Hide();
+            newOrder.ShowDialog();
+            this.Show();
+        }
+        //Кнопка Редактирования (Этап: Проверка)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            View.AdminPanel newOrder = new View.AdminPanel();
+            this.Hide();
+            newOrder.ShowDialog();
+            this.Show();
         }
     }
 }
