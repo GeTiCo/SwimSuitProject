@@ -68,12 +68,15 @@
                        HorizontalAlignment="Center"
                        FontFamily="Sylfaen"
                        FontSize="30" Foreground="Black" Height="40"/>
-            <TextBox Grid.Row="2" Margin="40, 20"  FontSize="30"/>
+            <TextBox Grid.Row="2" Margin="40, 20"  FontSize="30" Name="login"/>
             <PasswordBox Grid.Row="3" Margin="40, 20" FontSize="30" Name="password"/>
+            <TextBlock Grid.Row="4" Text="" Name="limits" HorizontalAlignment="Center"/>
             <Button Grid.Row="4"
+                    Name="btnNext"
+                    IsEnabled="True"
                     Margin="70, 20"
                     BorderBrush="White"
-                    Content="Каталог"
+                    Content="Войти"
                     FontSize="25"
                     FontFamily="Sylfaen"
                     Background="#FF007AFF"

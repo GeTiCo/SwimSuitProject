@@ -20,6 +20,7 @@ namespace swimSuitShop2.View
     /// </summary>
     public partial class AdminPanel : Window
     {
+        int limit = 4;
         public AdminPanel()
         {
             InitializeComponent();
@@ -32,9 +33,22 @@ namespace swimSuitShop2.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string pass = "admin";
+            string log = "admin";
+
+            if (pass == password.Password && log == login.Text)
+            {
                 View.settings newOrder = new View.settings();
                 this.Hide();
                 newOrder.ShowDialog();
+            }
+            limit--;
+            limits.Text = $"У вас осталось {limit} попыток";
+            if (limit == 0)
+            {
+                limits.Text = $"Вход заблокирован, покиньте этот раздел";
+                btnNext.IsEnabled = false;
+            }
         }
     }
 }

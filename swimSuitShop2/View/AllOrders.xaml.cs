@@ -31,8 +31,8 @@ namespace swimSuitShop2.View
             App.Current.Windows[0].Title = "MainWindow";
             foreach (Window window in App.Current.Windows)
             {
-                if (!(window is MainWindow))		//Проверка, что окно не главное
-                    window.Close();         //Закрыть все остальные окна, кроме главного
+                if (!(window is MainWindow))
+                    window.Close();
             }
         }
     }
